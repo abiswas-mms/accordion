@@ -1,8 +1,17 @@
 .ai-journal-accordion-wrapper {
   position: relative;
+  border-bottom: .0625rem solid #e5e5e5;
+}
+.ai-journal-accordion-heading {
+  color: #1a1a1a;
+  margin: 0;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  padding-left: 2.5rem;
 }
 p.ai-journal-accordion-content {
-  padding-left: 20px;
+  font-size: 1.125rem;
 }
 .ai-journal-accordion-wrapper p > input[type=checkbox] {
   position: absolute;
@@ -28,6 +37,6 @@ p.ai-journal-accordion-content {
   max-height: 800px;
   opacity: 1;
   transform: translate(0, 0);
-  margin-top: 14px;
+  margin: 14px 0;
   z-index: 2;
 }
