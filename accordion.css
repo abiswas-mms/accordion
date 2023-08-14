@@ -1,4 +1,10 @@
-.ai-journal-accordion-wrapper p > input.ai-journal-accordion-box[type=checkbox] {
+.ai-journal-accordion-wrapper {
+  position: relative;
+}
+p.ai-journal-accordion-content {
+  padding-left: 20px;
+}
+.ai-journal-accordion-wrapper p > input[type=checkbox] {
   position: absolute;
   cursor: pointer;
   width: 100%;
@@ -6,9 +12,22 @@
   z-index: 1;
   opacity: 0;
 }
-.ai-journal-accordion-wrapper p > input.ai-journal-accordion-box[type=checkbox]:checked ~ p.ai-journal-accordion-content {
+.ai-journal-accordion-wrapper p:has(input[type=checkbox]:checked) ~ p.ai-journal-accordion-content {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
   transform: translate(0, 50%);
+}
+.ai-journal-accordion-wrapper p:not(:has(input)) {
+  color: rgba(48, 69, 92, 0.8);
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  z-index: 2;
 }
