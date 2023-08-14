@@ -10,9 +10,6 @@
   font-weight: 700;
   padding-left: 2.5rem;
 }
-p.ai-journal-accordion-content {
-  font-size: 1.125rem;
-}
 .ai-journal-accordion-wrapper p > input[type=checkbox] {
   position: absolute;
   cursor: pointer;
@@ -26,9 +23,10 @@ p.ai-journal-accordion-content {
   max-height: 0;
   opacity: 0;
   transform: translate(0, 50%);
+  transition: all 0.2s;
 }
-.ai-journal-accordion-wrapper p:not(:has(input)) {
-  color: rgba(48, 69, 92, 0.8);
+.ai-journal-accordion-wrapper p.ai-journal-accordion-content {
+/*   color: rgba(48, 69, 92, 0.8); */
   font-size: 17px;
   line-height: 26px;
   letter-spacing: 1px;
@@ -39,4 +37,13 @@ p.ai-journal-accordion-content {
   transform: translate(0, 0);
   margin: 14px 0;
   z-index: 2;
+}
+p:has(input.ai-journal-accordion-box) {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  background-color: #333;
+  left: 0;
 }
