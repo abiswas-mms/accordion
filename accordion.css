@@ -1,0 +1,14 @@
+.ai-journal-accordion-wrapper p > input.ai-journal-accordion-box[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+.ai-journal-accordion-wrapper p > input.ai-journal-accordion-box[type=checkbox]:checked ~ p.ai-journal-accordion-content {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
