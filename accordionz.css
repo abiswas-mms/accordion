@@ -1,64 +1,68 @@
 .ai-journal-accordion-wrapper {
-  position: relative;
-  border-bottom: .0625rem solid #e5e5e5;
-  padding: 10px 0 25px;
+    position: relative;
+    border-bottom: .0625rem solid #e5e5e5;
+    padding: 10px 0 25px;
 }
 p#heading.ai-journal-accordion-heading {
-  color: #1a1a1a;
-  margin: 0;
-  font-family: var(--sans-serif);
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 700;
-  padding-left: 2.5rem;
-  line-height: normal;
+    color: #1a1a1a;
+    margin: 0;
+    font-family: var(--sans-serif);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    padding-left: 2.5rem;
+    line-height: normal;
 }
 .ai-journal-accordion-wrapper p > input[type=checkbox] {
-  position: absolute;
-  cursor: pointer;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-}
-.ai-journal-accordion-wrapper p:has(input[type=checkbox]:checked) ~ p#content.ai-journal-accordion-content {
-  margin-top: 0;
-  max-height: 0;
-  opacity: 0;
-  transform: translate(0, 50%);
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
 }
 .ai-journal-accordion-wrapper p#content.ai-journal-accordion-content {
-  font-size: 17px;
-  line-height: 26px;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-  max-height: 800px;
-  opacity: 1;
-  transform: translate(0, 0);
-  margin: 25px 0 0;
-  z-index: 2;
-  transition: all 0.2s;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate(0, 0);
+    margin: 25px 0 0;
+    z-index: 2;
+    transition: all 0.2s;
 }
 p:has(input[type=checkbox]#arrow-box.ai-journal-accordion-box) {
-  line-height: normal;
-  margin-block: 1em;
+    display: none;
+    line-height: normal;
+    margin-block: 1em;
 }
 p:has(input[type=checkbox]#arrow-box.ai-journal-accordion-box:checked)::after {
-  transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 p:has(input[type=checkbox]#arrow-box.ai-journal-accordion-box)::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  margin-top: 3px;
-  margin-left: 3px;
-  width: 15px;
-  height: 15px;
-  background-repeat: no-repeat;
-  background-image: url('data:image/svg+xml,<svg fill="%231a1a1a" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-39.6 -39.6 409.20 409.20" xml:space="preserve" stroke="%231a1a1a" stroke-width="33"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path></g></svg>');
-  background-size: 15px;
-  transform-origin: center;
-  transform: rotate(180deg);
+    content: "";
+    position: absolute;
+    display: inline-block;
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml,<svg fill="%231a1a1a" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-39.6 -39.6 409.20 409.20" xml:space="preserve" stroke="%231a1a1a" stroke-width="33"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path></g></svg>');
+    background-size: 15px;
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+/* Directus Label */
+.tox-collection__item-label:has(input)::before {
+    content: "1. Accordion Arrow"; 
+}
+.tox-collection__item-label > input {
+    display: none;
 }
