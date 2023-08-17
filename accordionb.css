@@ -3,7 +3,7 @@
   border-bottom: .0625rem solid #e5e5e5;
   padding: 10px 0 25px;
 }
-p#heading.ai-journal-accordion-heading {
+h2#heading.ai-journal-accordion-heading {
   color: #1a1a1a;
   margin: 0;
   font-family: var(--sans-serif);
@@ -61,12 +61,4 @@ p:has(input[type=checkbox]#arrow-box.ai-journal-accordion-box)::after {
   background-size: 15px;
   transform-origin: center;
   transform: rotate(180deg);
-}
-
-/* Directus Label */
-.tox-collection__item-label:has(input)::before {
-    content: "1. Accordion Arrow"; 
-}
-.tox-collection__item-label > input {
-    display: none;
 }
